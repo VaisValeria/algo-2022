@@ -4,7 +4,3 @@ def SortBubble(a):
             if a[j] > a[j + 1]:
                 a[j], a[j + 1] = a[j + 1], a[j]
     return a
-
-
-b = [1, 8, 2, 10, 0, 5]
-print(SortBubble(b))
