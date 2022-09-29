@@ -1,0 +1,16 @@
+def find(a, x):
+    l = 0
+    r = len(a) - 1
+    while l < r:
+        m = (r + l) // 2
+        if a[m] > x:
+            r = m - 1
+        elif a[m] < x:
+            l = m + 1
+        else: 
+            l = m
+            break
+    if a[l] == x:
+        return(l)
+    else:
+        return(-1)
