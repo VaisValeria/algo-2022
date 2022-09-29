@@ -1,0 +1,12 @@
+def counting_sort(a):
+    mi = min(a)
+    ma = max(a)
+    support = [0] * (ma - mi + 1)
+    for element in a:
+        support[element - mi] += 1
+    ind = 0
+    for i in range(len(support)):
+        for element in range(support[i]):
+            a[ind] = i + mi
+            ind += 1
+    return a
